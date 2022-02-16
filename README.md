@@ -1,8 +1,6 @@
 # bangle.js 2 app development
 
-_An open, hackable smartwatch._ 
-
-My collection of things I'm working on for it.
+_An open, hackable smartwatch._
 
 ## Links
 - [Unboxing](https://www.youtube.com/watch?v=EfwjPPZNKJc) - (YT Link)
