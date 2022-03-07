@@ -12,3 +12,6 @@ This is where I put the things I'm working on
 - [Tutorials](https://www.espruino.com/Bangle.js2#tutorials) - on Espruino
 - [Image Converter](https://www.espruino.com/Image+Converter)
 - [Unboxing](https://www.youtube.com/watch?v=EfwjPPZNKJc) - (YT Link)
+
+## For my reference:
+- 176x176
