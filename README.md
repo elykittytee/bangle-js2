@@ -1,7 +1,8 @@
 # bangle.js 2 app development
 
 _An open, hackable smartwatch._
-Trying to recreate the poketch watch.
+
+This is where I put the things I'm working on
 
 ## Quick Links
 
