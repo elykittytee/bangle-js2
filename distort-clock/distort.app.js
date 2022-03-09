@@ -19,12 +19,10 @@ function time() { //numbers
   
   const day = Date.now();
   const mo = d.getMonth()+1;
-  const damo = d.getDate();
-  var dayMonth = mo+"-"+damo;
   
   var middle= ":";
   
-  const date = january(d.getMonth())+" "+d.getDay(); 
+  const date = january(d.getMonth())+" "+d.getDate(); 
   const time = h + " " + ("0" + m).substr(-2);
   
    
