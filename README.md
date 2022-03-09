@@ -11,6 +11,7 @@ This is where I put the things I'm working on
 - [emulator](https://www.espruino.com/ide/?emulator)~
 - [Tutorials](https://www.espruino.com/Bangle.js2#tutorials) - on Espruino
 - [Image Converter](https://www.espruino.com/Image+Converter)
+- [Web-Safe Color Picker](https://www.w3schools.com/colors/colors_picker.asp)
 - [Unboxing](https://www.youtube.com/watch?v=EfwjPPZNKJc) - (YT Link)
 
 ## For my reference:
