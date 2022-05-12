@@ -10,6 +10,10 @@ const height = g.getHeight();
 
 const locale = require("locale");
 
+var fgTime = 0xf800;
+var bgTime = 0x3333ff;
+var dayDate = 0x000;
+
 function time() { //numbers
   require("Font4x5").add(Graphics);
   
@@ -23,19 +27,16 @@ function time() { //numbers
   var middle= ":";
   
   const date = january(d.getMonth())+" "+d.getDate(); 
-  const time = h + " " + ("0" + m).substr(-2);
+  const time = h + " " + ("0" + m).substr(-2);   
   
-   
-
   // time
   //g.setColor(0, 0, 0);
   g.setFontAlign(0,0);
-  g.setFontSixCaps(2).setColor(1, 0, 0).drawString(time, width/2, height/2+10);
+  g.setFontSixCaps(2).setColor(fgTime).drawString(time, width/2, height/2+10);
   
   g.setFont("4x5",2);
   g.setFontAlign(0,0);
-  g.setColor(0, 0, 0).drawString(date,width-50, height-16);
-  
+  g.setColor(dayDate).drawString(date,width-50, height-16);
 }
 
 function january(month){ //switch case for month names
@@ -80,17 +81,24 @@ function january(month){ //switch case for month names
 }
 
 function draw() {
-  g.setColor(0x3333ff).fillRect(0,40,width,height-offset);
+  g.setColor(bgTime).fillRect(0,40,width,height-offset);
   time();
 }
 
 //program start
-// Clear the screen once, at startup
-g.clear();
-// draw immediately at first
-draw();
-var secondInterval = setInterval(draw, 1000);
-// Stop updates when LCD is off, restart when on
+
+g.clear(); // Clear the screen once, at startup
+
+if (g.theme.dark==true){
+  dayDate = 0xffff;
+}
+else {
+  dayDate=0x000;
+}
+
+draw(); // draw immediately at first
+var secondInterval = setInterval(draw, 1000); // Stop updates when LCD is off, restart when on
+
 Bangle.on('lcdPower',on=>{
   if (secondInterval) clearInterval(secondInterval);
   secondInterval = undefined;
