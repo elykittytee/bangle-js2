@@ -4,6 +4,10 @@ Made for Bangle.js 2
 
 ![screenshot (3)](https://user-images.githubusercontent.com/44651387/157507228-100452bf-94a6-476f-aec6-d13d5dad86d5.png)
 
+---
+## pre-commit documentation below
+- `distort clock` on BangleApps
+
 ### Installation Instructions
 - Connect the Espruino IDE to bluetooth
 - Copy and paste the contents of `distort.app.js` to the editor (the right side)
