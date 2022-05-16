@@ -7,7 +7,7 @@ This is where I put the things I'm working on
 ## Quick Links
 
 - Go [here](https://shop.espruino.com/banglejs2) if you want one for yourself
-- [Official App Loader](https://banglejs.com/apps/)
+- [App Loader](https://elykittytee.github.io/BangleApps/)
 - [API Reference](https://www.espruino.com/Reference#software)
 - [emulator](https://www.espruino.com/ide/?emulator)~
 - [Tutorials](https://www.espruino.com/Bangle.js2#tutorials) - on Espruino
