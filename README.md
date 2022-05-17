@@ -17,3 +17,4 @@ This is where I put the things I'm working on
 
 ## For my reference:
 - 176x176
+- Modules: Flash,Storage,heatshrink,crypto,tensorflow,locale
