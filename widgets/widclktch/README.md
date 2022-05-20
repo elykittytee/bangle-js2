@@ -1,10 +1,10 @@
-# Widget Name
-Describe the app...
+# Clock Tap Widget
+Widget that allows you to touch the clock for things to happen
 
-Add screen shots (if possible) to the app folder and link then into this file with ![](.png)
+*Add screen shots (if possible) to the app folder and link then into this file with* `![](.png)`
 
 # Usage
-Describe how to use it
+Copy & Paste to your clock app and modify as needed
 
 # Features
 Name the function
