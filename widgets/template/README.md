@@ -1,6 +1,6 @@
 # Templates for Bangle.js Widgets & Clockfaces
 ---
-### `half-vertical-touch.js`
+### `vertical-half-tap.js`
   - touch the top half, it does a thing
   - touch the bottom half, it does a thing
   - that's it
