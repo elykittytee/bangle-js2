@@ -4,6 +4,9 @@
   - touch the top half, it does a thing
   - touch the bottom half, it does a thing
   - that's it
+  
+### `horiz-half-tap.js`
+  - same as above, but left and right
 
 ### `bot-three-tap.js`
   - on the bottom of the screen, tap one of 3 spots to toggle the touch space
