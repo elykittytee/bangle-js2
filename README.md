@@ -2,7 +2,14 @@
 
 _An open, hackable smartwatch._
 
-This is where I put the things I'm working on
+### Navigation
+- `distort-clock`, `poketch-clock`: working copy (non-app loader version) of watchfaces
+- `widgets`: development templates. if it lives here, it's not finished.
+  - `pomocute`: pomodoro, but make it cute
+  - `template`: watchface templates and ideas for future watchfaces
+  - `timertemplate`: timer app idea
+  - 'wdclktch`: template/widget that allows you to touch the clock for things to happen
+
 
 ## Quick Links
 
