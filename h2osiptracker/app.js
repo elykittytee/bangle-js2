@@ -71,7 +71,7 @@ function milestone(phrase){
 }
 
 function isDay(state){
-  
+  var day=1; //test only
   if (day==1){
     g.drawImage(imgNt,0,20);
   } else if (day==2){
@@ -81,15 +81,12 @@ function isDay(state){
   }
 }
 
-function time(state) {  
-  isDay(); //img bg
-  
-  if (state==1){ //font color change
+function time(state) {
+  if (state==1){
     g.setColor(1,1,1);
   } else {
     g.setColor(0,0,0);
-  }
-  
+  }  
   var d = new Date();
   var day = d.getDate();
   var time = require("locale").time(d, 1);
@@ -101,7 +98,8 @@ function time(state) {
 }
 
 function go() {  
-  //g.setColor(0xFF0).fillRect(0,0,175,175); //test bg  
+  //g.setColor(0xFF0).fillRect(0,0,175,175); //bg
+  isDay();
   g.setColor(1,1,1).fillRect(120, 30, 165, 165); //meterwhite
   g.setColor(0x000).drawRect(120, 30, 165, 165); //meteroutline
   g.clearRect(0,10,175,25); //textbox  
