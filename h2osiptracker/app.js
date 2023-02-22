@@ -71,10 +71,11 @@ function milestone(phrase){
 }
 
 function isDay(state){
-  var day=1; //test only
-  if (day==1){
+  var d = new Date();
+  var currentHr = d.getHours();
+  if (currentHr>=19 && currentHr<=8){
     g.drawImage(imgNt,0,20);
-  } else if (day==2){
+  } else if (currentHr>=17){
     g.drawImage(imgDsk,0,20);
   } else {
     g.drawImage(imgDay,0,20);
@@ -86,7 +87,7 @@ function time(state) {
     g.setColor(1,1,1);
   } else {
     g.setColor(0,0,0);
-  }  
+  }
   var d = new Date();
   var day = d.getDate();
   var time = require("locale").time(d, 1);
