@@ -5,7 +5,10 @@ const nameFont= g.getFont();
 
 const width = 175;
 const height = 175;
+
 var tap = 0;
+var d = new Date();
+var nowDate = d.getDate(); //today's date
 
 var imgDay = {
   width : 175, height : 175, bpp : 8,
@@ -23,51 +26,58 @@ var imgDsk = {
   transparent : 1,
   palette : new Uint16Array([13269,65535,31702,25381,25401,42097,52019,15317,17365,37938,31670,29654,52428,40017,37907,19413]),
   buffer : require("heatshrink").decompress(atob("iIA/AH4A/AH4A/AH4A/AH4A/AH4A/AH4A/AH4A/AH4A/AH4A/AH4Aei93AAkAAwoA/AH4A/AHGHIH4A/AH4A/AH4A/AH4A/AH4A/AH4A/AH4A/AH4A/AH4A/AH4A/AH4A/AH4A/AH4A/AH4A/AH4A/AH4AdgAJIuEHJf4A/AH4A3w5A/ACt4xBYJxBM/ABWIK5JiBJn6uLAAJbBLQRfCAQRaDCQRwEN4YECEAQFCvANCvAUGEQY3ECAQfCAQRGEHgj/DIAY1DAHyPCABhjDAH4AX/BA/ACuPK/4AW/4ABLI+PBQJN/VxJXCAH4A/AH4A/AH4A/AH4A/AH4A/AH4A/AH4A/AH4A/AH4A/AH4A/AH4A0/e734KH3e7CxQVIBYQZBBRIwCA4QdKDRQDEJY5XDG4gwBAwRPFCoQMJBoQHCGQIEDAYIMCAgQCCSoyMHNwQMEGYoKDAH4A/AH4A/AH4A/AH4A/AH4A/AH4A/AH4Am2UiAH4A/AH4A/AH4AflWqACeiGcgQIHpyT/AH4A/AH4A/AH4A/AH4A/AH4A/AH4A/AH4A/AH4A9qtVBRElBYNWJ35WJqQKJAANmsRQ/UQ9WsxVJBYIABNBSu7JQRWOK+g1BVhkms1lfQIXFq1lKwYOBB4r1vK5YNCT4RNBBQUmBQYADMwRXxJAVWsS7LIgJWCCIZUFAAohKVlBFDA4QODTQL3DAASuDVQoQFK2TkCsQHCqRKHIw5WFK4pSq8zaCJwT0BGwY+CdIhWKMYR0DDwbPCAFAsERwJIGWYavJBQYUDKoyurIIQ9BIwo7LBRBuIV2A9CGYayBHgo7FJYdSMBIAGK9MuKwfmKwpXEKxNVZwwAKJj3uABpWCKgQABqw6DCI5nBBYRwDABVuHBwAdIgdWVgo6E8te9yuDMoQcFAAJeGK1ozFsqSGCARhCM4IDEEZRTG8tVVtQALM4llXoYCCFiBWBK85WOtwPEKQT3UKwNWCaAALDhRWTXZIANY4NWYSIAKqpXQAwwXCKxVeEAosHVgLCTKxYdc9yyHsp+EBoJWLVzXlG4RXcVw7zBIoZJGKoIOCKzaNEKzavGsoFEQBAUFR7QeD9OZAAueCQ60YtwoFKoodJ9IDCDIoRID4VpKwwAGCIQECChmWKooTHBwY0OABed7oABzx1BrIVNCIJWBHARqOIxh5EAGdWRx3mf4wAGVbQAdrJHNAGGd7oAB6tVAAVdBAQAPC4YABCRgrECRorUJ5QyFABIZJCLIA/AH4A/AH4Ai7oAO6ownFEAA/AH4A/AH4A/AH4A/AH4A/AH4A0rnMAH4A/AH4A/AAlEAH4A/AH4A/AH4A/AH4A/AH4A/AH4A/AH4AppEzmdE/9DBIdPCAv0okz//0pASFAggYBCQP//80/H0AwIACmg1FAogeBE4OPFwI9Noc/HYISBoc85nMLIPDAQIABmAyCMYMzgc8Bok8AwQaB4lDpk0DQYOBCYYnBCgM8JwU0HAJfBmdACQgZB4fMCgJEDCQQ9CJYgOBAAw3DDgISBCgQTIAAxLCCiIvCJgYUQIgQAXDQZJPYIiSCGpgjEThYUFEhgcFZ4otOcwJWFLQgvKCgKAFIxI9EEgoKCXgYMC4YiBFIj1BngpFHQgMBCgRZDCYYdDF5QhBDASNFGYTODKIgYCBQSKIABYUCJwYTMFYRjEChhjFChwqDAH4A/AH4A/AH4A/AH4A/AH4A/AH4A/AH4A/AH4A/AH4A/AH4AGmAA="))
-};  
+};
+
 Bangle.on('touch', (n, e) => {
   // <88, top
   if (e.x > 120 && e.y < 165) {
-    rectangle(120, 30, 0x001F);
+    boxTap(120, 30, 0x001F);
     tap+=3;
-  } else {
-    g.clearRect(120, 30, 165, 165);
-    g.setColor(0x000);
-    g.drawRect(120, 30, 165, 165);
+  }
+  else {
+    encourage("RANDOM ENCOURAGEMENT");
   }
 });
 
+function drawTap(x,y,c,b){ //blue box
+  if (d.getDate() != nowDate){
+    tap=0;
+  }
+  else {
+    g.setColor(0x000).drawRect(x, y, b, b);
+    g.setColor(c).fillRect(x, b - tap, b, b);
+  }
+}
 
-function rectangle(x, y, color) {
+function boxTap(x, y, color) { //progress
   let b = 165;
-  //taptap(x, y, color, b);
   if (tap>=120 && tap<=130) {
     g.setColor(0x000);
     milestone("Almost there~");
-    taptap(x, y, color, b);
+    drawTap(x, y, color, b);
   }  else if (tap>=65 && tap<=70) {
     g.setColor(0x000);
     milestone("OHHH YOU'RE HALFWAY THERE");
-    taptap(x, y, color, b);
+    drawTap(x, y, color, b);
   } else if (tap>=18 && tap<=20) {
     g.setColor(0x000);
     milestone("Great start!!");
-    taptap(x, y, color, b);
+    drawTap(x, y, color, b);
   } else if (tap <= 135) {
     g.clearRect(0,10,175,25); //textbox clear
-    taptap(x, y, color, b);
+    drawTap(x, y, color, b);
   } else {
     g.setColor(0x000);
     milestone("Hydration achieved!");
   }
 }
 
-function taptap(x,y,c,b){
-  g.setColor(0x000).drawRect(x, y, b, b);
-  g.setColor(c).fillRect(x, b - tap, b, b);
+function milestone(phrase){ //progress
+  g.setFont(nameFont).drawString(phrase, 170, 20).setFontAlign(-1,0);
 }
 
-function milestone(phrase){
-  g.setFont(nameFont).drawString(phrase, 170, 20).setFontAlign(1,0);
+function encourage(phrase){
+  g.setFont(nameFont).drawString(phrase, 65, 20).setFontAlign(0,0);
 }
 
 function isDay(state){
@@ -88,7 +98,6 @@ function time(state) {
   } else {
     g.setColor(0,0,0);
   }
-  var d = new Date();
   var day = d.getDate();
   var time = require("locale").time(d, 1);
   var date = require("locale").date(d);
