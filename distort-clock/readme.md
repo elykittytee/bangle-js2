@@ -1,4 +1,4 @@
-# Distort Watchface
+# [Distort Watchface](https://github.com/elykittytee/BangleApps/tree/master/apps/distortclk)
 Was playing around with custom fonts and made something with it
 Made for Bangle.js 2
 
