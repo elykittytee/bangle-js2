@@ -40,7 +40,7 @@ var bg = [imgDay,imgNt,imgDsk];
 Bangle.on('touch', (n, e) => {
   // <88, top
   if (e.x > offset && e.y < height) {
-    g.setFontAlign(0,-1).setFont(nameFont, 2).setColor(0,0,0).drawString(getEncour(), width/2, 50);
+    g.setColor(0,0,0).setFontAlign(0,-1).setFont(nameFont, 2).drawString(getEncour(), width/2, 50);
     setInterval(clearText,2000);
   }
 });
@@ -58,11 +58,11 @@ function getEncour(){ //return string
 function isHr(){
   var currentHr = d.getHours();
   if (currentHr>=19 && currentHr<=8){ //bg change on time
-    g.drawImage(imgNt,0,20);
+    g.drawImage(imgNt,0,offset/2);
   } else if (currentHr>=17){
-    g.drawImage(imgDsk,0,20);
+    g.drawImage(imgDsk,0,offset/2);
   } else {
-    g.drawImage(imgDay,0,20);
+    g.drawImage(imgDay,0,offset/2);
   }
 }
 
@@ -72,10 +72,8 @@ function time() {
   var date = require("locale").date(d);
   var mo = require("date_utils").month(d.getMonth() + 1, 1);
 
-  g.setFontAlign(0, 0);
-  g.setFont(nameFont, 7).drawString(time, width/2, 100);
-  g.setFontAlign(1,1);
-  g.setFont(nameFont, 3).drawString(mo + " " + day, width/2+60, height-30);
+  g.setColor(0,0,0).setFontAlign(0, 0).setFont(nameFont, 7).drawString(time, width/2, 100);
+  g.setColor(0,0,0).setFontAlign(1,1).setFont(nameFont, 3).drawString(mo + " " + day, width/2+60, height-30);
 }
 
 
