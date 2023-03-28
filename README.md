@@ -11,7 +11,7 @@ _An open, hackable smartwatch._
   - 'wdclktch`: template/widget that allows you to touch the clock for things to happen
 
 
-## Quick Links
+## Espruino Quick Links
 
 - Go [here](https://shop.espruino.com/banglejs2) if you want one for yourself
 - [App Loader](https://banglejs.com/apps)
@@ -30,3 +30,8 @@ _An open, hackable smartwatch._
 ## For my reference:
 - 176x176
 - Modules: Flash,Storage,heatshrink,crypto,tensorflow,locale
+
+## elykittytee app loader
+- [Poketch clock](https://github.com/elykittytee/BangleApps/tree/master/apps/pokeclk)
+- [Distort clock](https://github.com/elykittytee/BangleApps/tree/master/apps/distortclk)
+- [Water Sip tracker clock](https://github.com/elykittytee/BangleApps/tree/master/apps/siptrackerclk)
