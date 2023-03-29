@@ -35,4 +35,5 @@ _An open, hackable smartwatch._
 ## elykittytee app loader
 - [Poketch clock](https://github.com/elykittytee/BangleApps/tree/master/apps/pokeclk)
 - [Distort clock](https://github.com/elykittytee/BangleApps/tree/master/apps/distortclk)
+- [Encourage & Positivity clock](https://github.com/elykittytee/BangleApps/blob/master/apps/encourageclk/app.js)
 - [Water Sip tracker clock](https://github.com/elykittytee/BangleApps/tree/master/apps/siptrackerclk)
