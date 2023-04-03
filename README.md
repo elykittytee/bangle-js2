@@ -19,6 +19,7 @@ _An open, hackable smartwatch._
 - [Unboxing](https://www.youtube.com/watch?v=EfwjPPZNKJc) - (YT Link)
 
 ## Development Tools/Reference
+- [Official App Loader](https://banglejs.com/apps/)
 - [elykittytee app loader](https://github.com/elykittytee/BangleApps)
 - [API Reference](https://www.espruino.com/Reference#software)
 - [Web Emulator (not the web app)](https://www.espruino.com/ide/?emulator)~
